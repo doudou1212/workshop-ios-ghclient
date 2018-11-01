@@ -9,9 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var timeLabel: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        timeLabel.text = "12:12"
+   
     // Do any additional setup after loading the view, typically from a nib.
   }
 
