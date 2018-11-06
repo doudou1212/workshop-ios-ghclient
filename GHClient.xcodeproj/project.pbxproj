@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		75068F41218AC02500FE34D5 /* NewsUITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75068F3F218AC02500FE34D5 /* NewsUITableViewCell.swift */; };
+		75068F42218AC02500FE34D5 /* NewsUITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75068F40218AC02500FE34D5 /* NewsUITableViewCell.xib */; };
 		7C548759218588F600D46A2F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C548758218588F600D46A2F /* AppDelegate.swift */; };
 		7C54875B218588F600D46A2F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C54875A218588F600D46A2F /* ViewController.swift */; };
 		7C54875E218588F600D46A2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C54875C218588F600D46A2F /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		75068F3F218AC02500FE34D5 /* NewsUITableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsUITableViewCell.swift; sourceTree = "<group>"; };
+		75068F40218AC02500FE34D5 /* NewsUITableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsUITableViewCell.xib; sourceTree = "<group>"; };
 		7C548755218588F600D46A2F /* GHClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C548758218588F600D46A2F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C54875A218588F600D46A2F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +67,8 @@
 				7C54875F218588F800D46A2F /* Assets.xcassets */,
 				7C548761218588F800D46A2F /* LaunchScreen.storyboard */,
 				7C548764218588F800D46A2F /* Info.plist */,
+				75068F3F218AC02500FE34D5 /* NewsUITableViewCell.swift */,
+				75068F40218AC02500FE34D5 /* NewsUITableViewCell.xib */,
 			);
 			path = GHClient;
 			sourceTree = "<group>";
@@ -134,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C548763218588F800D46A2F /* LaunchScreen.storyboard in Resources */,
+				75068F42218AC02500FE34D5 /* NewsUITableViewCell.xib in Resources */,
 				7C548760218588F800D46A2F /* Assets.xcassets in Resources */,
 				7C54875E218588F600D46A2F /* Main.storyboard in Resources */,
 			);
@@ -147,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7C84AB6E218A00920045F068 /* FakeDataProvider.swift in Sources */,
+				75068F41218AC02500FE34D5 /* NewsUITableViewCell.swift in Sources */,
 				7C54875B218588F600D46A2F /* ViewController.swift in Sources */,
 				7C548759218588F600D46A2F /* AppDelegate.swift in Sources */,
 			);
