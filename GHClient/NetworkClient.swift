@@ -10,11 +10,11 @@ import Foundation
 import Alamofire
 
 protocol NetworkClient {
-    func get(url: URL, header: [String: String]?, completion: @escaping (Any?, Error?) ->Void)
+    func get(url: URL, header: [String: String]?, completion: @escaping (Data?, Error?) ->Void)
 }
 
 class AlamofireNetworkClient: NetworkClient {
-    func get(url: URL, header: [String: String]?, completion: @escaping (Any?, Error?) ->Void) {
+    func get(url: URL, header: [String: String]?, completion: @escaping (Data?, Error?) ->Void) {
         Alamofire.request(url, method: .get, parameters: nil, headers:header).responseJSON { dataResponse in
             print("diu diudiu d")
             print(dataResponse)
@@ -22,6 +22,7 @@ class AlamofireNetworkClient: NetworkClient {
                 completion(nil, dataResponse.error)
                 return
             }
+            completion(dataResponse.data, nil)
         }
     }
 }

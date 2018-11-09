@@ -7,12 +7,12 @@
 //
 
 import UIKit
-let url = "https://api.github.com/users/doudou1212/received_events"
+let url = "https://api.github.com/users/emagrorrim/received_events"
 
 class NewsViewController: UIViewController {
   @IBOutlet weak var tableView: UITableView!
   
-  private let events: [Event] = FakeDataProvider().providerData()
+  private var events: [Event] = FakeDataProvider().providerData()
   
   private let reuseIdentifier = "NewsTableViewCell"
     private let networkClient: NetworkClient = AlamofireNetworkClient()
@@ -22,10 +22,21 @@ class NewsViewController: UIViewController {
     tableView.delegate = self
     tableView.dataSource = self
     tableView.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: reuseIdentifier)
-    let header = RequestHeaderBuilder().configure(username: "emagrorrim").configure(password: "password").build()
-    networkClient.get(url: URL(string: url)!, header: header) { (json, error) in
-      print("hahah")
-      print(json)
+    let header = RequestHeaderBuilder().configure(username: "emagrorrim").build()
+    networkClient.get(url: URL(string: url)!, header: header) { (data, error) in
+        if let error = error {
+            print(error)
+            return
+        }
+        let decoder = JSONDecoder()
+        do {
+            let events = try decoder.decode([Event].self, from: data!)
+            self.events = events
+            self.tableView.reloadData()
+        } catch {
+            print(error)
+        }
+        
     }
   }
 }
